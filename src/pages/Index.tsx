@@ -8,7 +8,6 @@ import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Navigation from '../components/Navigation';
-import { Button } from '@/components/ui/button';
 
 const Index = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -44,21 +43,20 @@ const Index = () => {
 
       {/* Sticky CTA Buttons */}
       <div className="fixed right-6 bottom-6 z-50 flex flex-col gap-3">
-        <Button
+        <button
           onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          className="px-6 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-slate-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
         >
           Start Project
-        </Button>
+        </button>
         
         {showScrollTop && (
-          <Button
+          <button
             onClick={scrollToTop}
-            size="icon"
-            className="bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700 text-cyan-400 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="p-3 rounded-lg bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700 text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             <ArrowUp className="h-5 w-5" />
-          </Button>
+          </button>
         )}
       </div>
 

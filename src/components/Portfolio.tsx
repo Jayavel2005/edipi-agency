@@ -67,6 +67,26 @@ const Portfolio = () => {
       technologies: ['Illustrator', 'Photoshop', 'InDesign', 'XD'],
       demoUrl: '#',
       codeUrl: '#'
+    },
+    {
+      id: 7,
+      title: 'Corporate Video Campaign',
+      description: 'Engaging corporate video series with motion graphics and professional editing.',
+      category: 'multimedia',
+      image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80',
+      technologies: ['After Effects', 'Premiere Pro', 'DaVinci Resolve', 'Cinema 4D'],
+      demoUrl: '#',
+      codeUrl: '#'
+    },
+    {
+      id: 8,
+      title: 'Interactive 3D Experience',
+      description: 'Immersive 3D web experience with interactive animations and sound design.',
+      category: 'multimedia',
+      image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80',
+      technologies: ['Three.js', 'Blender', 'WebGL', 'GSAP'],
+      demoUrl: '#',
+      codeUrl: '#'
     }
   ];
 
@@ -74,7 +94,8 @@ const Portfolio = () => {
     { id: 'all', label: 'All Projects' },
     { id: 'web', label: 'Web Development' },
     { id: 'mobile', label: 'Mobile Apps' },
-    { id: 'design', label: 'Design' }
+    { id: 'design', label: 'Design' },
+    { id: 'multimedia', label: 'Multimedia Works' }
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -98,20 +119,19 @@ const Portfolio = () => {
         </div>
 
         {/* Filter tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {filters.map((filter) => (
-            <Button
+            <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              variant={activeFilter === filter.id ? "default" : "outline"}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+              className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
                 activeFilter === filter.id
-                  ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
-                  : 'border-slate-600 text-slate-300 hover:text-white hover:border-cyan-400'
+                  ? 'bg-white text-slate-900 shadow-lg'
+                  : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/70 hover:text-white border border-slate-700/50'
               }`}
             >
               {filter.label}
-            </Button>
+            </button>
           ))}
         </div>
 
@@ -131,18 +151,12 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex gap-3">
-                    <Button
-                      size="sm"
-                      className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white"
-                    >
+                    <button className="p-2 rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white transition-colors duration-200">
                       <ExternalLink className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      size="sm"
-                      className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white"
-                    >
+                    </button>
+                    <button className="p-2 rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white transition-colors duration-200">
                       <Github className="h-4 w-4" />
-                    </Button>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -170,12 +184,9 @@ const Portfolio = () => {
 
         {/* View more CTA */}
         <div className="text-center mt-12">
-          <Button
-            variant="outline"
-            className="border-slate-600 text-slate-300 hover:text-white hover:border-cyan-400 px-8 py-3 rounded-full"
-          >
+          <button className="px-8 py-3 rounded-lg bg-slate-800/50 text-slate-300 hover:bg-slate-700/70 hover:text-white border border-slate-700/50 transition-all duration-300 font-medium">
             View More Projects
-          </Button>
+          </button>
         </div>
       </div>
     </section>
