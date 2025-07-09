@@ -34,7 +34,7 @@ const About = () => {
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             <span className="text-white">About </span>
             <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-              Nexus Agency
+              Edipi Agency
             </span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
@@ -44,24 +44,9 @@ const About = () => {
         </div>
 
         {/* Main content */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-1 gap-12 items-center mb-16">
           {/* Story */}
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-white mb-4">Our Story</h3>
-            <p className="text-slate-300 leading-relaxed">
-              Founded in 2019, Nexus Agency emerged from a simple belief: that exceptional digital 
-              experiences have the power to transform businesses and connect people in meaningful ways.
-            </p>
-            <p className="text-slate-300 leading-relaxed">
-              What started as a small team of creative minds has evolved into a full-service digital 
-              agency, helping brands across industries achieve their digital ambitions through innovative 
-              design, development, and strategic thinking.
-            </p>
-            <p className="text-slate-300 leading-relaxed">
-              Today, we continue to push the envelope, embracing emerging technologies and design trends 
-              to deliver solutions that are not just visually stunning, but strategically effective.
-            </p>
-          </div>
+          
 
           {/* Visual element */}
           <div className="relative">

@@ -1,5 +1,5 @@
 
-import { Monitor, Smartphone, Palette, Zap, Search, BarChart, Video, Image } from 'lucide-react';
+import { Monitor, Smartphone, Palette, Zap,Video, Image } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Services = () => {
@@ -52,22 +52,7 @@ const Services = () => {
       gradient: 'from-yellow-500 to-orange-500',
       delay: '500ms'
     },
-    {
-      icon: Search,
-      title: 'SEO & Marketing',
-      description: 'Data-driven digital marketing strategies to boost your online presence and drive conversions.',
-      features: ['SEO Optimization', 'Content Strategy', 'Social Media', 'Analytics'],
-      gradient: 'from-pink-500 to-rose-500',
-      delay: '600ms'
-    },
-    {
-      icon: BarChart,
-      title: 'Consulting',
-      description: 'Strategic consulting services to help you navigate the digital transformation journey.',
-      features: ['Digital Strategy', 'Technology Audit', 'Growth Planning', 'Process Optimization'],
-      gradient: 'from-cyan-500 to-blue-500',
-      delay: '700ms'
-    }
+    
   ];
 
   return (
